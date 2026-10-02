@@ -55,6 +55,6 @@ COPY document-qa/nginx.conf /etc/nginx/sites-available/default
 RUN printf '#!/bin/sh\nnginx\nexec java -jar /app/app.jar\n' > /app/start.sh \
     && chmod +x /app/start.sh
 
-EXPOSE 80
+EXPOSE 10000
 
 CMD ["/app/start.sh"]
